@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<! Amy's notes and changes:
+Corrected several spelling mistakes. 
+Corrected grammar when the original was intelligible enough for me to understand what it was trying to say.
+Added additional text explaining how to use the page
+Changed page from referencing index.js to indexAmy.js, so it would include changes I made there
+Added comments to several lines to verify my understanding
+>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ETPRI Data Amy</title>
+    <script src="Libs/neo4j-web.js"></script> <!Links to the neo4j-web.js JavaScript file, which is in the Lib folder, and presumably came from online.>
+    <link href="index.css" type="text/css" rel="stylesheet" /> <!Links to the index.css stylesheet, which I assume Uncle David wrote>
+  </head>
+
+  <body>
+	<p> Evolving to first page of app.  New features are tested as separate pages.  They are moved data driven format.
+    <br> Must have neo4j desktop running with database started.  <br>
+    To test <a href="CypherQuery.html">Cypher statements</a>&nbsp;&nbsp;
+    <a href="http://localhost:7474/browser/">Neo4j browser</a> <br>
+	To use this page: Fill in the "Match", "Where" and "Return" blanks. Each time you deselect one of these text boxes, the "CypherQuery" text box will update. When you are ready to run the query, select and deselect the CypherQuery text box.
+
+     <p>Match
+<textarea id="match" onblur="build()">(n)</textarea></p> <!When this text area is deselected, the build() function runs, updating the CypherQuery text area>
+<p>where
+<textarea id="where" onblur="build()">n.nameLast="Bolt"</textarea></p> <!Same here...>
+<p>Return object containing attribute(s). Format is {"name1": "value1", "name2": "value2"...} where name is attribute name in db, value is label name for table
+<textarea id="return" onblur="build()">
+  {"id(n)": "ID"
+  ,"n.nameLast": "Last Name"
+  ,"n.nameFirst": "First Name"
+  ,"n.email": "Email"}</textarea></p> <!And here.>
+<p>CypherQuery
+<textarea id="statement" onblur="run()"></textarea></p> <!And when THIS one is deselected, the run() function runs, which executes the query and puts the results in a table.>
+
+<div id="results"></div>
+
+	<script src="indexAmy.js"></script> <!Links to the indexAmy.js file (originally index.js), which was written by Uncle David and modified by me.>
+  </body>
+</html>

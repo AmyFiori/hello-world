@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Node Add/Edit</title>
+    <script src="Libs/neo4j-web.js"></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+	<p> Evoling to first page of app.  New features are tested a seprate pages.  One they working they are redone in a data driven format.
+    <br> must have neo4j desktop running with database started.  <br>
+    to test <a href="CypherQuery.html">Cypher statements</a>&nbsp;&nbsp;
+    <a href="http://localhost:7474/browser/">Neo4j browser</a> <br>
+
+     <p>
+	<textarea id="statement">match (n)
+where n.nameLast="Bolt"
+return id(n),n.nameLast,n.nameFirst</textarea>
+    <input id="runButton" type="button" value="RUN" onclick="run()">
+<div id="results"></div>
+
+	<script src="index.js"></script>
+  </body>
+</html>

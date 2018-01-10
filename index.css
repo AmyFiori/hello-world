@@ -1,0 +1,49 @@
+
+textarea {
+	border-width: 0;
+	font: 15px "Courier New";
+	margin: 0;
+	width: 100%;
+	resize: vertical;
+	min-height: 36px;
+	height: 72px;
+	padding: 0;
+	background-color: skyblue;
+	vertical-align: top;
+}
+
+
+table .absorbing-column {
+    width: 100%;
+}
+
+table {
+	table-layout: auto;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	position: relative;
+	padding: 0;
+	border: 1px solid #ccc;
+}
+
+#results table {
+	width: auto;
+	background-color: #EEE;
+	font-size: 13px;
+}
+#results th {
+	border-right: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	padding: 3px 5px;
+	background-color: #999;
+	color: #FFF;
+}
+#results td {
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	padding: 3px 5px;
+	vertical-align: top;
+}

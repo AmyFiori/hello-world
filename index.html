@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ETPRI Data</title>
+    <script src="Libs/neo4j-web.js"></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+	<p> Evoling to first page of app.  New features are tested a seprate pages.  They are moved data driven format.
+    <br> must have neo4j desktop running with database started.  <br>
+    to test <a href="CypherQuery.html">Cypher statements</a>&nbsp;&nbsp;
+    <a href="http://localhost:7474/browser/">Neo4j browser</a> <br>
+
+     <p>Match
+<textarea id="match" onblur="build()">(n)</textarea></p>
+<p>where
+<textarea id="where" onblur="build()">n.nameLast="Bolt"</textarea></p>
+<p>Return object containing atribute name is atribute name in db, value is lable name for table
+<textarea id="return" onblur="build()">
+  {"id(n)": "ID"
+  ,"n.nameLast": "Last Name"
+  ,"n.nameFirst": "First Name"
+  ,"n.email": "Email"}</textarea></p>
+<p>CypherQuery
+<textarea id="statement" onblur="run()"></textarea></p>
+
+<div id="results"></div>
+
+	<script src="index.js"></script>
+  </body>
+</html>
